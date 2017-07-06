@@ -1,0 +1,224 @@
+  <section class="content-header">
+    <h1>
+      New Data Source
+
+    </h1>
+
+
+  </section>
+  <br>
+  <div class="row">
+
+
+    <div class="col-md-8">
+     <div class="box box-info">
+      <div class="box-header with-border ui-sortable-handle" style="cursor: move;">
+        <h3 class="box-title">Data Source</h3>
+
+        <div class="pull-right">
+         <div class="btn-group">
+          <a> <button type="button" class="btn btn-primary btn-sm">SAVE</button></a>
+          <a> <button type="button" class="btn btn-danger btn-sm">CANCEL</button></a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="box-body">
+
+      <form>
+        <div class="form-group">
+          <label for="email">Name</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">SQL Query</label>
+          <textarea class="form-control" rows="4" cols="50" >select ( rtrim(C.docName) + ' '+ rtrim(C.docLName)) as docfn , ( rtrim(PT.titleName)+' ' '+ rtrim(P.firstName)+' ' + rtrim(P.lastName)) as Namefn,N,NATDES , * from Appoint AP left join PATIENT P on P. hn = AP.hn left join DEPT D on pre_dept_code = D.deptCode left join DOCC C on AP.doctor=C.docCode left join Nation N on P.nation=N NATCODE where doctor between ' 1' and '87636' and pre_dept_code between 'acu' and 'xray' and appoint_dat between '2560071' adn '25600731' order by appoint_date, pre_dept_code,doctor 
+          </textarea>
+        </div>
+
+      </form>
+    </div>
+    <div class="box-footer clearfix">
+      <a href="" class="btn btn-sm btn-default btn-flat pull-right">Preview</a>
+    </div>
+  </div>
+
+
+  <section class="content-header">
+    <h1>
+      Result
+
+    </h1>
+
+
+  </section>
+  <br>
+
+  <div class="box box-info">
+    <div class="box-body">
+      <div class="">
+        <table class="table table-bordered">
+         <thead>
+          <tr>
+            <th>HN</th>
+            <th>Name</th>
+            <th>Tel</th>
+            <th>Doct</th>
+            <th>Dept</th>
+            <th>dataTable</th>
+          </tr>
+        </thead>
+        <tbody id="recent-table" class="">
+          <tr>
+            <td>001</td>
+            <td>Test Name</td>
+            <td>098-xxxxxxx</td>
+            <td>######</td>
+            <td>Subport</td>
+            <td>14/07/60 13:30</td>
+          </tr>
+          <tr>
+            <td>001</td>
+            <td>Test Name</td>
+            <td>098-xxxxxxx</td>
+            <td>######</td>
+            <td>Subport</td>
+            <td>14/07/60 13:30</td>
+          </tr>
+          <tr>
+            <td>001</td>
+            <td>Test Name</td>
+            <td>098-xxxxxxx</td>
+            <td>######</td>
+            <td>Subport</td>
+            <td>14/07/60 13:30</td>
+          </tr>
+          <tr>
+            <td>001</td>
+            <td>Test Name</td>
+            <td>098-xxxxxxx</td>
+            <td>######</td>
+            <td>Subport</td>
+            <td>14/07/60 13:30</td>
+          </tr>
+          <tr>
+            <td>001</td>
+            <td>Test Name</td>
+            <td>098-xxxxxxx</td>
+            <td>######</td>
+            <td>Subport</td>
+            <td>14/07/60 13:30</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="col-md-4">
+
+  <div class="box box-info">
+    <div class="box-header with-border ui-sortable-handle" style="cursor: move;">
+      <h3 class="box-title">Data Source</h3>
+
+    </div>
+
+    <div class="box-body">
+      <div class="table-responsive">
+        <table class="table no-margin">
+          <tbody id="recent-table" class="">
+            <tr>
+              <td>Appointment</td>
+              <td>
+                <div class="btn-group">
+                  <a> <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button></a>
+                  <a> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></a>
+
+                </div>
+
+              </td>
+
+            </tr>
+            <tr>
+              <td>Test</td>
+              <td>
+                <div class="btn-group">
+                  <a> <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button></a>
+                  <a> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></a>
+
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <td>Simple Text</td>
+              <td>
+                <div class="btn-group">
+                  <a> <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button></a>
+                  <a> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></a>
+
+                </div>
+
+              </td>
+            </tr>
+             <tr>
+              <td>Notification</td>
+              <td>
+                <div class="btn-group">
+                  <a> <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button></a>
+                  <a> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></a>
+
+                </div>
+
+              </td>
+            </tr>
+             <tr>
+              <td>Demo Customer</td>
+              <td>
+                <div class="btn-group">
+                  <a> <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button></a>
+                  <a> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></a>
+
+                </div>
+
+              </td>
+            </tr>
+             <tr>
+              <td>Super User created </td>
+              <td>
+                <div class="btn-group">
+                  <a> <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i></button></a>
+                  <a> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></a>
+
+                </div>
+
+              </td>
+            </tr>
+             
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</div><!-- row-->
+<div class="row">
+
+  <div class="col-md-12">
+
+
+  </div>
+</div>
+
