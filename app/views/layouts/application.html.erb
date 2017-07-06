@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Prototype</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Prototype</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<body>
+  <%= render "layouts/partials/navTop" %>
+  <div class="container-fluid">
+    <div class="row">
 
-  <body>
-    <%= yield %>
-  </body>
+
+      <%= render "layouts/partials/siteBar" %>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <%= yield %>
+      </div>
+
+
+
+    </div>
+  </div>
+</body>
 </html>

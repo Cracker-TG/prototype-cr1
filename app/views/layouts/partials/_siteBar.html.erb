@@ -1,0 +1,51 @@
+<div class="col-sm-3 col-md-2 sidebar">
+  <ul class="nav nav-sidebar">
+
+    <% if current_page?("/") %> 
+    <li class="active"> 
+      <%= link_to root_path ,:class =>"active" do %>
+      Dashboard
+      <% end %>
+    </li> 
+    <% else %>
+    <li>  
+      <%=  link_to root_path ,:class =>"" do %>    
+      Dashboard
+      <% end %>
+    </li>
+    <%end %>
+
+    <% if current_page?('/new-campaigns') %>
+
+    <li class="active">
+     <a class="active" href="#collap" data-toggle="collapse" data-parent="#MainMenu" aria-expanded="true" >Campaigns <i class="glyphicon glyphicon-triangle-bottom pull-right"  ></i></a>
+     <div class="collapse" id="collap">
+      
+       <a href="/new-campaigns" class="list-group-item">New Campaigns</a>
+       <a href="" class="list-group-item">Manage Campaigns</a>
+
+     </div>
+   </li>
+   <%else%>
+   <li>
+    <a class="active" href="#demo4" data-toggle="collapse" data-parent="#MainMenu" aria-expanded="false" >Campaigns <i class="glyphicon glyphicon-triangle-bottom pull-right"  ></i></a>
+    <div class="collapse" id="demo4">
+      
+     <a href="/new-campaigns" class="list-group-item">New Campaigns</a>
+     <a href="" class="list-group-item">Manage Campaigns</a>
+
+   </div>
+   <%end%>
+   
+ </li>
+ <li><a href="#">Automate Tasks</a></li>
+ <li><a href="#">SMS Templates</a></li>
+ <li><a href="#">Data Sources</a></li>
+ <li><a href="#">Transactions</a></li>
+ <li><a href="#">Users</a></li>
+ <li><a href="#">Settings</a></li>
+ <li><a href="#">Logout</a></li>
+
+</ul>
+
+</div>
