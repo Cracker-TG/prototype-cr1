@@ -1,90 +1,116 @@
-  <h1 class="page-header">New Campaigns</h1>
-  
-  <h3 class="page-header">Campaign Setup</h3>
+<section class="content-header">
+  <h1>
+    New Campaign
 
-  <form class="form-horizontal">
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Type</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control"  placeholder="Type">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Title</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" placeholder="Title">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Assign To</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" placeholder="Assign To" value="user">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Start Date/Time</label>
-      <div class="col-sm-10 " >
-        <input type="text" class="form-control" id="datetimepicker"  >
-      </div>
-    </div>
+  </h1>
 
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Repeat Interval</label>
-      <div class="col-sm-10 " >
-        <select class="form-control">
-          <option value="volvo">Do not epeat</option>
-          <option value="volvo">Do repeat</option>
 
-        </select>
+</section>
+<br>
 
-      </div>
+<div class="box box-info">
+  <div class="box-header with-border ui-sortable-handle" style="cursor: move;">
+    <h3 class="box-title">Recent Activities</h3>
+    <div class="box-tools pull-right">
     </div>
+  </div>
+<br>
+  <div class="box-body">
 
-    <br>
-    <h3 class="page-header">Recipient Source</h3>
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Data Source</label>
-      <div class="col-sm-10 " >
-        <select class="form-control">
-          <option value="volvo"></option>
-          <option value="volvo"></option>
-        </select>
-
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Type</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control"  placeholder="Type">
+        </div>
       </div>
-    </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Title</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Title">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Assign To</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" placeholder="Assign To" value="user">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Start Date/Time</label>
+        <div class="col-sm-10 " >
+          <input type="text" class="form-control" id="datetimepicker"  >
+        </div>
+      </div>
 
       <div class="form-group">
-      <label class="col-sm-2 control-label">Text CSU</label>
-      <div class="col-sm-10 " >
-        <input type="file" class=" filestyle"  >
+        <label class="col-sm-2 control-label">Repeat Interval</label>
+        <div class="col-sm-10 " >
+          <select class="form-control">
+            <option value="volvo">Do not epeat</option>
+            <option value="volvo">Do repeat</option>
+
+          </select>
+
+        </div>
       </div>
+
+      <br>
+        <div class="box-header with-border ui-sortable-handle" style="cursor: move;">
+    <h3 class="box-title">Recipient Source</h3>
+    <div class="box-tools pull-right">
     </div>
-    <br>
+  </div>
+<br>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Data Source</label>
+        <div class="col-sm-10 " >
+          <select class="form-control">
+            <option value="volvo"></option>
+            <option value="volvo"></option>
+          </select>
 
-      <h3 class="page-header">Message</h3>
-    <div class="form-group">
-      <label class="col-sm-2 control-label">Text</label>
-      <div class="col-sm-10">
-       <textarea class="form-control" rows="4" cols="50" ></textarea>
-
+        </div>
       </div>
-    </div>
 
-    <div class="form-group">
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Text CSU</label>
+        <div class="col-sm-10 " >
+          <input type="file" class=" filestyle"  >
+        </div>
+      </div>
+      <br>
+
+         <div class="box-header with-border ui-sortable-handle" style="cursor: move;">
+    <h3 class="box-title">Message</h3>
+    <div class="box-tools pull-right">
+    </div>
+  </div>
+  <br>
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Text</label>
+        <div class="col-sm-10">
+         <textarea class="form-control" rows="4" cols="50" ></textarea>
+
+       </div>
+     </div>
+
+     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-success">Enter</button>
       </div>
     </div>
   </form>
+</div>
+</div>
+<script type="text/javascript">
+  var currentDate = new Date();  
 
-  <script type="text/javascript">
-    var currentDate = new Date();  
+  $('#datetimepicker').datetimepicker({
+   format: 'DD/MM/YYYY HH:mm',
+   defaultDate: currentDate,
 
-    $('#datetimepicker').datetimepicker({
-     format: 'DD/MM/YYYY HH:mm',
-     defaultDate: currentDate,
+ });
 
-   });
- 
-   $(":file").filestyle({placeholder: "No file",buttonName: "btn-success"});
-  </script>
+  $(":file").filestyle({placeholder: "No file",buttonName: "btn-success"});
+</script>

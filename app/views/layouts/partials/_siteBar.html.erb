@@ -15,7 +15,7 @@
     </li>
     <%end %>
 
-    <% if current_page?('/new-campaigns') %>
+    <% if current_page?("/new-campaigns") %>
 
     <li class="active">
      <a class="active" href="#collap" data-toggle="collapse" data-parent="#MainMenu" aria-expanded="true" >Campaigns <i class="glyphicon glyphicon-triangle-bottom pull-right"  ></i></a>
@@ -28,8 +28,8 @@
    </li>
    <%else%>
    <li>
-    <a class="active" href="#demo4" data-toggle="collapse" data-parent="#MainMenu" aria-expanded="false" >Campaigns <i class="glyphicon glyphicon-triangle-bottom pull-right"  ></i></a>
-    <div class="collapse" id="demo4">
+    <a class="active" href="#campaigns" data-toggle="collapse" aria-expanded="false" >Campaigns <i class="glyphicon glyphicon-triangle-bottom pull-right"  ></i></a>
+    <div class="collapse" id="campaigns">
       
      <a href="/new-campaigns" class="list-group-item">New Campaigns</a>
      <a href="" class="list-group-item">Manage Campaigns</a>
@@ -40,11 +40,38 @@
  </li>
  <li><a href="#">Automate Tasks</a></li>
  <li><a href="#">SMS Templates</a></li>
- <li><a href="#">Data Sources</a></li>
- <li><a href="#">Transactions</a></li>
- <li><a href="#">Users</a></li>
- <li><a href="#">Settings</a></li>
- <li><a href="#">Logout</a></li>
+
+ <% if current_page?("/sql-query") || current_page?("/appointment") || current_page?('appointment')%>
+
+ <li class="active">
+  <a class="active" href="#datasouce" data-toggle="collapse" data-parent="#MainMenu" aria-expanded="false" >Data Source <i class="glyphicon glyphicon-triangle-bottom pull-right"  ></i></a>
+  <div class="collapse" id="datasouce">
+    
+   <a href="/sql-query" class="list-group-item">SQL Query</a>
+   <a href="" class="list-group-item">Contact List</a>
+   <a href="/appointment" class="list-group-item">Appointment</a>
+
+ </div>
+ 
+</li>
+<%else%>
+<li class="">
+  <a class="active" href="#datasouce" data-toggle="collapse" data-parent="#MainMenu" aria-expanded="false" >Data Source <i class="glyphicon glyphicon-triangle-bottom pull-right"  ></i></a>
+  <div class="collapse" id="datasouce">
+    
+   <a href="/sql-query" class="list-group-item">SQL Query</a>
+   <a href="" class="list-group-item">Contact List</a>
+   <a href="/appointment" class="list-group-item" id="appointment-page">Appontment</a>
+
+ </div>
+ 
+</li>
+<%end%>
+
+<li><a href="#">Transactions</a></li>
+<li><a href="#">Users</a></li>
+<li><a href="#">Settings</a></li>
+<li><a href="#">Logout</a></li>
 
 </ul>
 

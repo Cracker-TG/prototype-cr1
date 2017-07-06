@@ -273,3 +273,34 @@ body {
     color: #444;
     border-top: 1px solid #d2d6de;
 }
+
+.content-header {
+    position: relative;
+    padding: 15px 15px 0 15px;
+}
+.content-header>h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.content-header>h1>small {
+    font-size: 15px;
+    display: inline-block;
+    padding-left: 4px;
+    font-weight: 300;
+}
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+.box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+    background-color: #fff;
+} 
